@@ -1,0 +1,27 @@
+,cssの文法
+
+
+＜style type="text/css">
+
+
+(ターゲット)｛
+	(プロパティ):(値);
+	(プロパティ):(値);
+
+｝
+
+＜/style＞
+
+
+ターゲットを指定するときは
+ classの場合は前に　.
+ idの場合には前に #
+ タグそのものを指定するときはそのまま書く
+
+タグの後にclassやidを指定するときは続けて書く。
+ 複数指定したい場合はコロン「,」でくぎって続ける。
+ 限定したい場合は外側から順番にスペースで区切って書く。
+例) div#box,.inner-box   : class="box"とid="inner-box"の両方に適用
+    div#box .inner-box   : class="box"内部のid="inner-box"にのみ適用
+    div .box             : <div></div>の内部にあるclass="box"に適用
+    .box .box            : class="box"の内部にあるclass="box"に適用(内側のみ)
